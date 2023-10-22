@@ -8,7 +8,7 @@ padding: 20px; }
 </style>
 <div class="wrap eas-wrap">
 <h1><?php echo EBE_ANTI_SPAM_PLUGIN_NAME; ?> version <?php echo EBE_ANTI_SPAM_VERSION; ?></h1>
-<p>* Keep on mind, that in case of emergency, you can disable this plugin via FTP access, just rename the plugin folder: <strong><?php echo basename(dirname(__DIR__)); ?></strong></p>
+<p>* Keep on mind, that in case of emergency, you can disable this plugin via FTP access or File manager in your hosting control panel, just rename the plugin folder: <strong><?php echo dirname(str_replace(ABSPATH, '', __DIR__)); ?></strong></p>
 <form method="post" action="<?php echo admin_url('options.php'); ?>" novalidate="novalidate">
 <?php settings_fields($this->optionGroup); ?>
 <table class="form-table eoi-table">
