@@ -18,7 +18,7 @@ add_action('init', function () {
 if (!session_id()) {
 session_start(); }
 });
-define('EBE_ANTI_SPAM_RAND', '_' . substr(md5(session_id()), 6, 12));
+define('EBE_ANTI_SPAM_RAND', '_' . substr(md5(session_id() . SECURE_AUTH_SALT), 6, 12));
 if (!class_exists('EBE_ANTI_SPAM_Actions_Module')) {
 class EBE_ANTI_SPAM_Actions_Module
 {
